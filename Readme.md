@@ -33,3 +33,13 @@ Manual bind
 dokku config:set sonar SONARQUBE_JDBC_URL=jdbc:postgresql://dokku-postgres-sonar-postgres/sonar_postgres SONARQUBE_JDBC_USERNAME=postgres SONARQUBE_JDBC_PASSWORD={$put-password-of-bind}
 ```
 
+
+## Persistance in sonar for install plugins in marketplace
+
+```
+mkdir /var/lib/dokku/data/storage/sonar
+dokku storage:mount sonar /var/lib/dokku/data/storage/sonar/downloads:/opt/sonarqube/extensions/downloads
+dokku storage:mount sonar /var/lib/dokku/data/storage/sonar/plugins:/opt/sonarqube/extensions/plugins
+dokku ps:restart sonar
+
+```
