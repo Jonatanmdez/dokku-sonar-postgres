@@ -1,9 +1,19 @@
-# Dokku with postgres
+# Sonar in Dokku  with postgres
 
 ```
+dokku apps:create sonar
 dokku postgres:create sonar_postgres
 dokku postgres:link sonar_postgres sonar
 ```
+
+In your local
+
+```
+git clone 
+git remote add dokku dokku@yourinstance
+git push dokku
+```
+
 
 ## Bind manual between variables
 
