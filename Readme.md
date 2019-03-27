@@ -6,6 +6,12 @@ dokku postgres:create sonar_postgres
 dokku postgres:link sonar_postgres sonar
 ```
 
+If you use dokku-limit, you need to increase the limit 
+
+```
+dokku limit:set sonar web memory=2G
+```
+
 In your local
 
 ```
