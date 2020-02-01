@@ -1,3 +1,3 @@
-FROM sonarqube:7.7-community
+FROM sonarqube:8.1-community-beta
 
 EXPOSE 9000
